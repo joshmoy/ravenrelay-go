@@ -20,7 +20,7 @@ import (
 	"unicode/utf8"
 )
 
-const Version = "0.1.0"
+const Version = "0.1.1"
 const maxResponse = 16 * 1024 * 1024
 
 // Email and Response preserve the public API's JSON fields, including future additions.
@@ -79,7 +79,7 @@ func New(apiKey string, options Options) (*Client, error) {
 	}
 	base := options.BaseURL
 	if base == "" {
-		base = "https://api.ravenrelay.com"
+		base = "https://api.getravenrelay.com"
 	}
 	if strings.ContainsAny(base, "\\ \t\r\n\x00#") {
 		return nil, errors.New("invalid BaseURL")
